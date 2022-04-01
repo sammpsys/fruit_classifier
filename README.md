@@ -7,7 +7,6 @@ This project uses the Jetank (based on Nvidia Jetson Nano 4GB: https://jetbot.or
 - [Requirements](#requirements)
 - [Description](#description)
 - [Setup](#setup)
-- [Reflections](#reflections)
 - [Maintainers](#maintainers)
 - [Contributors](#contributors)
 
@@ -45,15 +44,6 @@ Upload remote_control.py to your Jetank. Save socket_connect somewhere on your l
 
 ### Training/Retraining
 The VGG-16 network was trained in an Anaconda environment. It is not necessary to perform your own training to run the fruit_classifer.ipynb in real time. However, if one wishes to conduct one's own training, it is recommeded that one uses Anaconda 2021.11 with Pytorch 1.11.0 and Torchvision 0.12.0. It is recommended that you reorganize the folder into the following structure: /images/train/apples/, /images/train/oranges/, /images/val/apples/, images/val/oranges/. 
-
-## Reflections
-This project is not as advanced as it could be. There are several reasons for this:
-
-1. Many different machine learning models were tested until a good one was found. This process took a lot of time which led to further complications down the line.
-2. There were issues with the camera on several instances. This necessitated a reflashing of the image which delayed the work.
-3. Initially, an object detection model (such as YoloV3 and SSD-mobilenet) was pursued. However, these models were not compatiable with the version of the image on the SD card.
-4. I had issues with using the office network. I was able eventually to solve this issue using an alternative method but it took several days to solve.
-5. When I eventually deployed my model on the Jetank, I had compatibility issues with Pytorch. I eventually found out which versions of Pytorch and Torchvision are compatible with Jetpack 4.5. 
 
 ## Maintainers
 [Sam @sammpsys](https://gitlab.com/sammpsys)
