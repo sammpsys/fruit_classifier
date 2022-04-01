@@ -27,18 +27,18 @@ The fruit_classification notebook contains the real-time fruit classifer. It use
 ### Remote Control
 This portion consists of two Python files - socket_connect.py and remote_control.py. The code is based on a previous assignment that was done in the assignment in conjunction with another student, Hannes Ringblom. The code is based on Nvidia's Gamepad tutorial. 
 
-A UDP connection is used to send messages between a client (user's computer) and the server (Jetank). Thus, the Jetank can be controlled using the computer. It is recommended that you run remote_control.py first in the JupyterLab terminal of the Jettank first and then run socket_connect.py on your machine. Remember that you need to change the IP-address in the script to the one matching your Jettank. 
+A UDP connection is used to send messages between a client (user's computer) and the server (Jetank). Thus, the Jetank can be controlled using the computer. It is recommended that you run remote_control.py first in the JupyterLab terminal of the Jetank first and then run socket_connect.py on your machine. Remember that you need to change the IP-address in the script to the one matching your Jetank. 
 
 ## Setup
 
 ### Hardware
 The hardware required for this project is the following: Nvidia Jetson Nano 4GB, Jetson Developer Kit, 3 18650 batteries and a Micro-USB to USB-A cable. 
 
-### Jetbot
+### Jetank
 To setup the Jetank follow the steps in this guide: https://www.youtube.com/watch?v=qNy1hulFk6I. This guide includes instructions for downloading and flashing the Jetbot SD card images. The version of Jetpack used in this project is 4.5. 
 
 ### Machine learning
-The neural network that is used on the Jetbot in classifying images in real time uses Pytorch v1.8, Torchvision v0.9.0 and Python 3.6. The necessary packages can be installed using https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-10-now-available/72048. 
+The neural network that is used on the Jetank in classifying images in real time uses Pytorch v1.8, Torchvision v0.9.0 and Python 3.6. The necessary packages can be installed using https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-10-now-available/72048. 
 
 ### Training/Retraining
 The VGG-16 network was trained in an Anaconda environment. It is not necessary to perform your own training to run the classifier in real time. However, if one wishes to conduct one's own training, it is recommeded that one uses Anaconda 2021.11 with Pytorch 1.11.0 and Torchvision 0.12.0. It is recommended that you reorganize the folder into the following structure: /images/train/apples/, /images/train/oranges/, /images/val/apples/, images/val/oranges/.
