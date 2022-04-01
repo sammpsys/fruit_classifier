@@ -37,14 +37,14 @@ The hardware required for this project is the following: Nvidia Jetson Nano 4GB,
 ### Jetank
 To setup the Jetank follow the steps in this guide: https://www.youtube.com/watch?v=qNy1hulFk6I. This guide includes instructions for downloading and flashing the Jetbot SD card images. The version of Jetpack used in this project is 4.5. 
 
-### Machine learning
-The neural network that is used on the Jetank in classifying images in real time uses Pytorch v1.8, Torchvision v0.9.0 and Python 3.6. The necessary packages can be installed using https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-10-now-available/72048. 
+### Fruit classification
+The neural network that is used on the Jetank in classifying fruits in real time uses Pytorch v1.8, Torchvision v0.9.0 and Python 3.6. The necessary packages can be installed using https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-10-now-available/72048. The pre-trained model can be downloaded from (Github doesn't allow files larger than 50 MB): https://drive.google.com/file/d/1FZnoECT0d64aDwrZF2BZ0AHCo4NZ0yJg/view?usp=sharing.
 
 ### Remote Control
 Upload remote_control.py to your Jetank. It is recommended that you run remote_control.py first in the JupyterLab terminal of the Jetank first and then run socket_connect.py in Pycharm on your machine. Remember that you need to change the IP-address in socket_connect to the one matching your Jetank. This can be run in tandem with the fruit_classifier notebook.
 
 ### Training/Retraining
-The VGG-16 network was trained in an Anaconda environment. It is not necessary to perform your own training to run the classifier in real time. However, if one wishes to conduct one's own training, it is recommeded that one uses Anaconda 2021.11 with Pytorch 1.11.0 and Torchvision 0.12.0. It is recommended that you reorganize the folder into the following structure: /images/train/apples/, /images/train/oranges/, /images/val/apples/, images/val/oranges/.
+The VGG-16 network was trained in an Anaconda environment. It is not necessary to perform your own training to run the fruit_classifer.ipynb in real time. However, if one wishes to conduct one's own training, it is recommeded that one uses Anaconda 2021.11 with Pytorch 1.11.0 and Torchvision 0.12.0. It is recommended that you reorganize the folder into the following structure: /images/train/apples/, /images/train/oranges/, /images/val/apples/, images/val/oranges/. 
 
 ## Reflections
 This project is not as advanced as it could be. There are several reasons for this:
